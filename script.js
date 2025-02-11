@@ -19,7 +19,7 @@ async function uploadPhoto() {
     formData.append("photo", file);
 
     try {
-        const response = await fetch("https://faithful-celebration-production.up.railway.app/upload", {
+        const response = await fetch("https://photo-upload-supabase.vercel.app/upload", {
             method: "POST",
             body: formData,
         });
@@ -46,7 +46,7 @@ async function fetchPhotos() {
     photosContainer.innerHTML = "<p>Chargement des images...</p>";
 
     try {
-        const response = await fetch("https://faithful-celebration-production.up.railway.app/photos");
+        const response = await fetch("https://photo-upload-supabase.vercel.app/photos");
         const photos = await response.json();
 
         if (!response.ok) {

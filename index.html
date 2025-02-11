@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Upload Supabase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="upload.png">
+</head>
+<body>
+    <div class="container">
+        <h2>Uploader une Photo 📸</h2>
+        <div class="upload-box">
+            <label for="photoInput" class="upload-label">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Choisissez une photo</span>
+            </label>
+            <input type="file" id="photoInput" accept="image/*">
+        </div>
+        <button onclick="uploadPhoto()">
+            <i class="fas fa-upload"></i> Envoyer
+        </button>
+        <p id="message"></p>
+        <div id="loading" style="display: none;">
+            <i class="fas fa-spinner fa-spin"></i> Uploading...
+        </div>
+        <img id="preview" src="" alt="" style="display: none;">
+        <button onclick="fetchPhotos()">
+            <i class="fas fa-images"></i> Voir toutes les photos
+        </button>
+        
+        <div id="photos-container"></div>
+        
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
